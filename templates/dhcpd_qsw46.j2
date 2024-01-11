@@ -1,0 +1,14 @@
+option tftp-server-host code 66 = string;
+option bootfile-name code 67 = string;
+
+subnet {{ subnet }} netmask {{ netmask }} {
+    interface ens192;
+    range {{ range }};
+    option routers {{ gw }};
+    option subnet-mask {{ netmask }};
+    option tftp-server-host "tftp://172.30.130.131";
+    option bootfile-name "{{ bootfile }}";
+    default-lease-time 300;
+    max-lease-time 600;
+}
+#

@@ -1,0 +1,18 @@
+option space vendor_43;
+option vendor_43.image-name_43 code 1 = string;
+option vendor_43.bootfile-name_43 code 2 = string;
+option vendor_43.configfile-name_43 code 3 = string;
+option vendor_43.tftp-server_43 code 4 = string;
+
+subnet {{ subnet }} netmask {{ netmask }} {
+    interface ens192;
+    range {{ range }};
+    vendor-option-space vendor_43;
+    option vendor_43.image-name_43 "{{ mes24_image_name }}";
+    option vendor_43.bootfile-name_43 "{{ mes24_boot_name }}";
+    option vendor_43.configfile-name_43 "{{ mes24_startup_name }}";
+    option vendor_43.tftp-server_43 "172.30.130.131";
+    option routers {{ gw }};
+    option subnet-mask {{ netmask }};
+}
+#
