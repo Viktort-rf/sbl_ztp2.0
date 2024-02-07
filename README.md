@@ -5,3 +5,5 @@
 
     qsw46хх:
         boot startup-config null
+
+Так же на сервере необходим isc-dhcp-server
